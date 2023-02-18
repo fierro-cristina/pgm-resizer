@@ -213,7 +213,7 @@ int main(int argc, char **argv) {
     int mode = atoi(argv[7]); // resize method <method>
 
     Image source(inputPath); // read image
-    Image resized = sourceSwitchResizeMethods(width, height, mode); // resize the image
+    Image resized = source.SwitchResizeMethods(width, height, mode); // resize the image
     Image shifted = resized.Shift(dx, dy); // displace the image
 
     shifted.Save(outputPath); // save resulting image
